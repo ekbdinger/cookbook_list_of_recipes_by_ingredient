@@ -2,6 +2,7 @@ name = List of Recipes by Ingredient
 description = See all the recipes that use a particular ingredient
 core = 7.x
 package = Views
+php = 5.2.4
 dependencies[] = ctools
 dependencies[] = views
 features[ctools][] = views:views_default:3.0

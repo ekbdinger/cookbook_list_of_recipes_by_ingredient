@@ -73,11 +73,31 @@ function list_of_recipes_by_ingredient_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'recipe' => 'recipe',
   );
+  /* Filter criterion: Recipe: Ingredient Name */
+  $handler->display->display_options['filters']['name']['id'] = 'name';
+  $handler->display->display_options['filters']['name']['table'] = 'recipe_ingredient';
+  $handler->display->display_options['filters']['name']['field'] = 'name';
+  $handler->display->display_options['filters']['name']['operator'] = 'contains';
+  $handler->display->display_options['filters']['name']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['name']['expose']['operator_id'] = 'name_op';
+  $handler->display->display_options['filters']['name']['expose']['label'] = 'Ingredient Name';
+  $handler->display->display_options['filters']['name']['expose']['operator'] = 'name_op';
+  $handler->display->display_options['filters']['name']['expose']['identifier'] = 'name';
+  $handler->display->display_options['filters']['name']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    3 => 0,
+  );
 
   /* Display: Page */
   $handler = $view->new_display('page', 'Page', 'page');
   $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
   $handler->display->display_options['path'] = 'ingredients';
+  $handler->display->display_options['menu']['type'] = 'normal';
+  $handler->display->display_options['menu']['title'] = 'Ingredients';
+  $handler->display->display_options['menu']['weight'] = '5';
+  $handler->display->display_options['menu']['name'] = 'main-menu';
+  $handler->display->display_options['menu']['context'] = 0;
   $export['paul_ingredient_list'] = $view;
 
   return $export;
