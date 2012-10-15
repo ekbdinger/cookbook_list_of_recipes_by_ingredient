@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the List of Recipes by Ingredient feature.
+ */
+
+include_once 'list_of_recipes_by_ingredient.features.inc';
