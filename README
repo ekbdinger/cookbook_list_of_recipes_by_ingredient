@@ -2,4 +2,5 @@ Oct. 12, 2012
 
 adding view with recipes that use a particular ingredient
 
-the current url is /recipe/by_ing_id
+actually the view name is  paul_ingredient_list' and the url is
+/ingredients
